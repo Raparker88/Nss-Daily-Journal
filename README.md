@@ -1,5 +1,5 @@
 # Wireframe
 
-![Wireframe](./images/wireframe.png)
+![Wireframe](/images/wireframe.png)
 Format: ![Alt Text](url)
 
