@@ -15,18 +15,40 @@
         <h2>Create Journal Entry</h2>
         <div>
             <div>
-                <text>concepts covered</text>
-                <date>date</date>
+                <form action="">
+                    <fieldset>
+                        <label for="journalConcepts">Concepts Covered</label>
+                        <input type="textarea" name="journalConcepts" id="journalConcepts">
+                    </fieldset>
+                </form>
+                <form action="">
+                    <fieldset>
+                        <label for="journalDate">Date of Entry</label>
+                        <input type="date" name="journalDate" id="journalDate">
+                    </fieldset>
+                </form>
             </div>
             <div>
-                <select name="" id="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <form action="">
+                    <fieldset>
+                        <label for="journalMood">Mood</label>
+                        <select type="select" name="journalMood" id="journalMood">
+                            <option value="depressed">depressed</option>
+                            <option value="happy">happy</option>
+                            <option value="silly">silly</option>
+                            <option value="content">content</option>
+                            <option value="stressed">stressed</option>
+                        </select>
+                    </fieldset>
+                </form>
+                <form action="">
+                    <fieldset>
+                        <label for="journalEntry">Journal Entry</label>
+                        <input type="textarea" name="journalEntry" id="journalEntry">
+                    </fieldset>
+                </form>
             </div>
-            <button></button>
+            <button>Record Journal Entry</button>
         </div>
     </article>
     <article>
