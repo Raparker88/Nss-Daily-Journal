@@ -1,4 +1,5 @@
 # Wireframe
 
-<img src="./images/wireframs.png" alt="">
+![Wireframe](./images/wireframe.png)
+Format: ![Alt Text](url)
 
