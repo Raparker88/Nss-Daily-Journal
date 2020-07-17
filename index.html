@@ -4,78 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
-    <link rel="stylesheet" href="scripts/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<header>
-    <img src="" alt="">
-    <h1></h1>
-</header>
-<main>
-    <article>
-        <h2>Create Journal Entry</h2>
-        <div>
-            <div>
-                <form action="">
-                    <fieldset>
-                        <label for="journalConcepts">Concepts Covered</label>
-                        <input type="textarea" name="journalConcepts" id="journalConcepts">
-                    </fieldset>
-                </form>
-                <form action="">
-                    <fieldset>
-                        <label for="journalDate">Date of Entry</label>
-                        <input type="date" name="journalDate" id="journalDate">
-                    </fieldset>
-                </form>
-            </div>
-            <div>
-                <form action="">
-                    <fieldset>
-                        <label for="journalMood">Mood</label>
-                        <select type="select" name="journalMood" id="journalMood">
-                            <option value="depressed">depressed</option>
-                            <option value="happy">happy</option>
-                            <option value="silly">silly</option>
-                            <option value="content">content</option>
-                            <option value="stressed">stressed</option>
-                        </select>
-                    </fieldset>
-                </form>
-                <form action="">
-                    <fieldset>
-                        <label for="journalEntry">Journal Entry</label>
-                        <input type="textarea" name="journalEntry" id="journalEntry">
-                    </fieldset>
-                </form>
-            </div>
-            <button>Record Journal Entry</button>
-        </div>
-    </article>
-    <article>
-        <h2>Entries</h2>
-        <ul>
-            <li>
-                <h3>XXX</h3>
-                <button>edit</button>
-                <button>delete</button>
-            </li><li>
-                <h3>XXX</h3>
-                <button>edit</button>
-                <button>delete</button>
-            </li><li>
-                <h3>XXX</h3>
-                <button>edit</button>
-                <button>delete</button>
-            </li>
-        </ul>
-
-    </article>
-</main>
-<footer>
-    <div>Rebecca Parker</div>
-    <div><a href="https://github.com/Raparker88">My github</a></div>
-</footer>
 <body>
+    <header>
+        <!-- <img class="logo" src="./images/dahlia.JPG" alt="dahlia flower"> -->
+        <h1 class="title">My Daily Journal</h1>
+    </header>
+    <main>
+        <article>
+            <div class="entry__all">
+                <h2>Create Journal Entry</h2>
+                <div class="concepts__date">
+                    <form action="">
+                        <fieldset>
+                            <label for="journalConcepts">Concepts Covered</label>
+                            <input type="textarea" name="journalConcepts" id="journalConcepts">
+                        </fieldset>
+                    </form>
+                    <form action="">
+                        <fieldset>
+                            <label for="journalDate">Date of Entry</label>
+                            <input type="date" name="journalDate" id="journalDate">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="mood__entry">
+                    <form action="">
+                        <fieldset>
+                            <label for="journalMood">Mood</label>
+                            <select type="select" name="journalMood" id="journalMood">
+                                <option value="depressed">depressed</option>
+                                <option value="happy">happy</option>
+                                <option value="silly">silly</option>
+                                <option value="content">content</option>
+                                <option value="stressed">stressed</option>
+                            </select>
+                        </fieldset>
+                    </form>
+                    <form action="">
+                        <fieldset>
+                            <label for="journalEntry">Journal Entry</label>
+                            <input type="textarea" name="journalEntry" id="journalEntry">
+                        </fieldset>
+                    </form>
+                </div>
+                <button>Record Journal Entry</button>
+            </div>
+        </article>
+        <article class="all__entries">
+            <h2>Entries</h2>
+            <ul class="past__entries">
+               
+            </ul>
+
+        </article>
+    </main>
+    <script type="module" src="./scripts/main.js"></script>
+    <footer>
+        <div>Rebecca Parker</div>
+        <div><a href="https://github.com/Raparker88">My github</a></div>
+    </footer>
     
 </body>
 </html>
