@@ -15,41 +15,42 @@
         <article>
             <div class="entry__all">
                 <h2>Create Journal Entry</h2>
-                <div class="concepts__date">
-                    <form action="">
-                        <fieldset>
-                            <label for="journalConcepts">Concepts Covered</label>
-                            <input type="textarea" name="journalConcepts" id="journalConcepts">
-                        </fieldset>
-                    </form>
-                    <form action="">
-                        <fieldset>
-                            <label for="journalDate">Date of Entry</label>
-                            <input type="date" name="journalDate" id="journalDate">
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="mood__entry">
-                    <form action="">
-                        <fieldset>
-                            <label for="journalMood">Mood</label>
-                            <select type="select" name="journalMood" id="journalMood">
-                                <option value="depressed">depressed</option>
-                                <option value="happy">happy</option>
-                                <option value="silly">silly</option>
-                                <option value="content">content</option>
-                                <option value="stressed">stressed</option>
-                            </select>
-                        </fieldset>
-                    </form>
-                    <form action="">
-                        <fieldset>
-                            <label for="journalEntry">Journal Entry</label>
-                            <input type="textarea" name="journalEntry" id="journalEntry">
-                        </fieldset>
-                    </form>
-                </div>
-                <button>Record Journal Entry</button>
+                <form action="">
+                    <fieldset class="entry_forms">
+                        <div class="concepts__date">
+                            <div  class="concepts">
+                                <label for="journalConcepts">Concepts Covered</label>
+                                <input type="textarea" name="journalConcepts" id="journalConcepts">
+                            </div>
+                            <div>
+                                <label for="journalDate">Date of Entry</label>
+                                <input type="date" name="journalDate" id="journalDate">
+                            </div>
+                                
+                        </div>
+                        <div class="mood__entry">
+                            <div>
+                                <label for="journalMood">Mood</label>
+                                <select type="select" name="journalMood" id="journalMood">
+                                    <option value="depressed">depressed</option>
+                                    <option value="happy">happy</option>
+                                    <option value="silly">silly</option>
+                                    <option value="content">content</option>
+                                    <option value="stressed">stressed</option>
+                                    <option value="confused">confused</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="journalEntry">Journal Entry</label>
+                                <input type="textarea" name="journalEntry" id="journalEntry">
+                            </div>
+                        </div>
+                        
+                        <div class="button_div">
+                            <input class="entry_button" type="submit" value="Record Journal Entry">
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </article>
         <article class="all__entries">
