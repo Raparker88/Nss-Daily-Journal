@@ -1,60 +1,15 @@
+@import "./entries.css";
+@import "./entryForm.css";
+@import "./footer.css";
+@import "./header.css";
+
+
 body {
     margin: 0;
-}
-
-header {
-    display:flex;
-    justify-content: space-between;
-    background-color: rgb(33 41 22);
-    padding: 20px;
-    
-}
-
-.logo {
-    width: 10em;
-}
-
-.title {
-    align-self: flex-end;
-    color: navajowhite;
-    margin-right: 50px;
-    flex-basis: 100%;
-    text-align: right;
-    font-family: "andale mono", monospace;
-}
-
-.concepts__date{
-    display:flex;
-    padding: 15px 0;
-}
-
-.concepts {
-    padding-right: 10px;
-}
-
-.mood__entry {
-    display:flex;
-    padding-bottom: 15px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    font-size: 2em;
-    background-color: rgb(33 31 22);
-    padding: 20px;
-    color: navajowhite;
-    font-family: "andale mono", monospace;
-}
-
-.all__entries {
-    width: 26em;
-    align-self: flex-end;
 }
 main {
     display:flex;
     flex-direction: column;
-     /* background-color: rgb(169 158 90); */
      background-image: url(../images/poppy.jpg);
 }
 h2{
@@ -63,53 +18,9 @@ h2{
     font-size: 2em;
 }
 
-.entry__all {
-    background-color: rgba(250, 250, 250, 0.8);
-    width: fit-content;
-    margin: 30px;
-    padding: 10px;
-    border: 3px solid rgb(33 41 22);
-}
-.entry_forms {
-    display: flex;
-    flex-direction: column;
-    border: none;
-}
 
-.all__entries {
-    background-color: rgba(250, 250, 250, 0.8);
-    margin: 30px 100px;
-    padding: 10px 30px 30px 30px;
-    border: 3px solid rgb(33 41 22);
-    height: 520px;
-    overflow: auto;
 
-}
-.button_div{
-    display:flex;
-}
-#recordEntry {
-    margin-left: auto;
-}
 
-a:hover {
-    color: hotpink;
-}
 
-a:visited {
-    color: lightgreen;
-}
 
-a:link {
-    color: coral;
-}
 
-textarea {
-    width: 500px;
-    height: 275px;
-    margin-left: 10px;
-}
-
-input[id=journalConcepts] {
-    width: 350px;
-}
