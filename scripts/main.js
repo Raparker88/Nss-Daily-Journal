@@ -1,3 +1,5 @@
-import { entryList } from "./JournalEntryList.js"
+import  "./JournalEntryList.js"
+import { entryForm } from "./EntryForm.js"
 
-entryList()
+
+entryForm()
