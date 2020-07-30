@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "date": "2020-07-14",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Ok"
+    },
+    {
+      "id": 2,
+      "date": "2020-07-13",
+      "concept": "Javascript Automation",
+      "entry": "We learned how to add Javascript into our projects in order to automate the writing of html when adding new content",
+      "mood": "tired"
+    },
+    {
+      "id": 3,
+      "date": "2020-07-15",
+      "concept": "Debugging",
+      "entry": "We learned to use our dev tools in the browser to find bugs the files and troubleshoot problems occurring in our code.",
+      "mood": "happy"
+    },
+    {
+      "concept": "api",
+      "date": "2020-07-30",
+      "mood": "confused",
+      "entry": "We learned how to set up our own api and store input data from the user. This is my first official entry input in the browser!",
+      "id": 4
+    }
+  ]
+}

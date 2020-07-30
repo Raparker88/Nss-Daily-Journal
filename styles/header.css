@@ -1,0 +1,17 @@
+header {
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(33 41 22);
+    padding: 20px;
+    
+}
+
+
+.title {
+    align-self: flex-end;
+    color: navajowhite;
+    margin-right: 50px;
+    flex-basis: 100%;
+    text-align: right;
+    font-family: "andale mono", monospace;
+}

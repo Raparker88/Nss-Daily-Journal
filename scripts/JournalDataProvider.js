@@ -1,46 +1,39 @@
-/*
- *   Journal data provider for Daily Journal application
- *
- *      Holds the raw data about each entry and exports
- *      functions that other modules can use to filter
- *      the entries for different purposes.
- */
+const eventHub = document.querySelector(".container")
 
-// This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "07/24/2025",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Ok"
-    },
-    {
-        id:2,
-        date:"07/13/2020",
-        concept: "Javascript Automation",
-        entry: "We learned how to add Javascript into our projects in order to automate the writing of html when adding new content",
-        mood: "tired"
 
-    },
-    {
-        id:3,
-        date:"07/15/2020",
-        concept: "Debugging",
-        entry: "We learned to use our dev tools in the browser to find bugs the files and troubleshoot problems occurring in our code.",
-        mood: "happy"
+let entries = []
 
-    }
-]
+const dispatchChangeEvent = () => {
+    const entryStateChangedEvent = new CustomEvent("entryStateChanged")
+    eventHub.dispatchEvent(entryStateChangedEvent)
+    console.log("this happened")
+}
 
-/*
-    You export a function that provides a version of the
-    raw data in the format that you want
-*/
+export const getEntries = () => {
+    return fetch('http://localhost:3000/entries')
+        .then(response => response.json())
+        .then(parsedEntries => {
+            entries = parsedEntries
+        })
+
+}
+
+export const saveEntry = entry => {
+    return fetch('http://localhost:3000/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(getEntries)
+    .then(dispatchChangeEvent)
+}
+
 export const useJournalEntries = () => {
-    const sortedByDate = journal.sort(
+    const sortedByDate = entries.sort(
         (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+            Date.parse(nextEntry.date) - Date.parse(currentEntry.date)
     )
     return sortedByDate
 }
