@@ -40,19 +40,11 @@ const render = () => {
     </div>
     <div class="mood__entry">
         <div>
-            <label for="journalMood">Mood</label>
-            <select type="select" name="journalMood" id="journalMood">
-                <option value="depressed">depressed</option>
-                <option value="happy">happy</option>
-                <option value="silly">silly</option>
-                <option value="content">content</option>
-                <option value="stressed">stressed</option>
-                <option value="confused">confused</option>
-            </select>
+            <input type="text" placeholder="Current Mood" id="journalMood">
         </div>
         <div>
             <textarea placeholder="Write Entry Here" id="journalEntry"></textarea>
-        </div>
+        <div>
     </div>
     
     <div class="button_div">

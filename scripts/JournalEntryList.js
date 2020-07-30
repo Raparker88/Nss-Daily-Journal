@@ -5,6 +5,9 @@ const eventHub = document.querySelector(".container")
 const contentElement = document.querySelector(".past__entries")
 
 
+eventHub.addEventListener("entryStateChanged", event => {
+    entryList()
+})
 
 const render = (entryArray) => {
     
@@ -20,7 +23,3 @@ export const entryList = () => {
     
 }
 entryList()
-
-eventHub.addEventListener("entryStateChanged", event => {
-    entryList()
-})

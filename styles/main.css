@@ -88,7 +88,7 @@ h2{
 .button_div{
     display:flex;
 }
-.entry_button {
+#recordEntry {
     margin-left: auto;
 }
 
@@ -104,11 +104,12 @@ a:link {
     color: coral;
 }
 
-input[name=journalEntry] {
+textarea {
     width: 500px;
     height: 275px;
+    margin-left: 10px;
 }
 
-input[name=journalConcepts] {
+input[id=journalConcepts] {
     width: 350px;
 }

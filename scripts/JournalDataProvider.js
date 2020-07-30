@@ -4,8 +4,9 @@ const eventHub = document.querySelector(".container")
 let entries = []
 
 const dispatchChangeEvent = () => {
-    const entryStateChangedEvent = new CustomEvent("entryStatecChanged")
+    const entryStateChangedEvent = new CustomEvent("entryStateChanged")
     eventHub.dispatchEvent(entryStateChangedEvent)
+    console.log("this happened")
 }
 
 export const getEntries = () => {
@@ -32,7 +33,7 @@ export const saveEntry = entry => {
 export const useJournalEntries = () => {
     const sortedByDate = entries.sort(
         (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+            Date.parse(nextEntry.date) - Date.parse(currentEntry.date)
     )
     return sortedByDate
 }

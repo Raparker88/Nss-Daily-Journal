@@ -22,53 +22,11 @@
       "mood": "happy"
     },
     {
-      "concept": "ddsfa",
+      "concept": "api",
       "date": "2020-07-30",
-      "mood": "happy",
-      "entry": "dfsa",
+      "mood": "confused",
+      "entry": "We learned how to set up our own api and store input data from the user. This is my first official entry input in the browser!",
       "id": 4
-    },
-    {
-      "concept": "fa",
-      "date": "2020-07-30",
-      "mood": "depressed",
-      "entry": "fadfa",
-      "id": 5
-    },
-    {
-      "concept": "jhkj",
-      "date": "2020-07-30",
-      "mood": "depressed",
-      "entry": "sdafd",
-      "id": 6
-    },
-    {
-      "concept": ";kjkl",
-      "date": "2020-07-30",
-      "mood": "depressed",
-      "entry": "fadf",
-      "id": 7
-    },
-    {
-      "concept": "oiyoiuy",
-      "date": "2020-07-30",
-      "mood": "depressed",
-      "entry": "uhhyiupy",
-      "id": 8
-    },
-    {
-      "concept": "yep",
-      "date": "2020-07-30",
-      "mood": "depressed",
-      "entry": "yup",
-      "id": 9
-    },
-    {
-      "concept": "K;J",
-      "date": "2020-07-30",
-      "mood": "depressed",
-      "entry": "OOPS",
-      "id": 10
     }
   ]
 }
