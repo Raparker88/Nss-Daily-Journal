@@ -6,7 +6,6 @@ let entries = []
 const dispatchChangeEvent = () => {
     const entryStateChangedEvent = new CustomEvent("entryStateChanged")
     eventHub.dispatchEvent(entryStateChangedEvent)
-    console.log("this happened")
 }
 
 export const getEntries = () => {

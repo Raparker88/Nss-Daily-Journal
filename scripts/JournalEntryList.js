@@ -6,7 +6,8 @@ const contentElement = document.querySelector(".past__entries")
 
 
 eventHub.addEventListener("entryStateChanged", event => {
-    entryList()
+    const entries = useJournalEntries()
+    render(entries)
 })
 
 const render = (entryArray) => {
@@ -15,7 +16,7 @@ const render = (entryArray) => {
     
 }
 
-export const entryList = () => {
+const entryList = () => {
     getEntries().then(() => {
         const entries = useJournalEntries()
         render(entries)
@@ -23,3 +24,4 @@ export const entryList = () => {
     
 }
 entryList()
+
