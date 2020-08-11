@@ -1,6 +1,6 @@
 import{ saveEntry } from "./JournalDataProvider.js"
 
-const contentTarget = document.querySelector(".entry__all")
+const contentTarget = document.querySelector(".entryForm__container")
 const eventHub = document.querySelector(".container")
 
 export const entryForm = () => {
@@ -18,9 +18,16 @@ export const entryForm = () => {
                 mood: mood.value,
                 entry: entry.value
             }
+            console.log(concepts.value)
 
-            saveEntry(newEntry)
-            render()
+            if (concepts.value && date.value && mood.value && entry.value){
+                
+                saveEntry(newEntry)
+                render()
+            }else{
+                window.alert("Please fill in all fields")
+            }
+
         }
     })
 }

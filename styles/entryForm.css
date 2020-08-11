@@ -1,4 +1,4 @@
-.entry__all {
+.entryForm__container {
     background-color: rgba(250, 250, 250, 0.8);
     width: fit-content;
     margin: 30px;
@@ -25,6 +25,7 @@
 
 #recordEntry {
     margin-left: auto;
+    margin-top: 12px;
 }
 
 textarea {
