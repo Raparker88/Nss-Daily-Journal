@@ -25,8 +25,15 @@
       "concept": "api",
       "date": "2020-07-30",
       "mood": "confused",
-      "entry": "We learned how to set up our own api and store input data from the user. This is my first official entry input in the browser!",
+      "entry": "We learned how to set up our own api and store input data from the user. This is my first official entry input in the browser! lalala",
       "id": 4
+    },
+    {
+      "concept": "new entry",
+      "date": "2020-08-14",
+      "mood": "confused",
+      "entry": "haha",
+      "id": 5
     }
   ]
 }

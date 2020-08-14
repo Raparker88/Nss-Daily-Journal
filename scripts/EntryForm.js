@@ -4,19 +4,19 @@ import{ saveEntry, editEntry, useJournalEntries } from "./JournalDataProvider.js
 const contentTarget = document.querySelector(".entryForm__container")
 const eventHub = document.querySelector(".container")
 
-const concepts = document.querySelector("#journalConcepts")
-const date = document.querySelector("#journalDate")
-const mood = document.querySelector("#journalMood")
-const entry = document.querySelector("#journalEntry")
-const id = document.querySelector("#journalId")
-
 
 
 eventHub.addEventListener("editNoteClicked", event => {
     const allEntries = useJournalEntries()
     const entryId = event.detail.entryId
     const entryObject = allEntries.find(entry => entry.id === entryId)
-   
+    
+    const concepts = document.querySelector("#journalConcepts")
+    const date = document.querySelector("#journalDate")
+    const mood = document.querySelector("#journalMood")
+    const entry = document.querySelector("#journalEntry")
+    const id = document.querySelector("#journalId")
+    
 
 
     concepts.value= entryObject.concept
@@ -32,6 +32,13 @@ export const entryForm = () => {
     eventHub.addEventListener("click", clickEvent =>{
         if (clickEvent.target.id === "recordEntry") {
             
+            const concepts = document.querySelector("#journalConcepts")
+            const date = document.querySelector("#journalDate")
+            const mood = document.querySelector("#journalMood")
+            const entry = document.querySelector("#journalEntry")
+            const id = document.querySelector("#journalId")
+            
+
             
             
             if (concepts.value && date.value && mood.value && entry.value){
