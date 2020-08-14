@@ -4,11 +4,27 @@ import{ saveEntry, editEntry, useJournalEntries } from "./JournalDataProvider.js
 const contentTarget = document.querySelector(".entryForm__container")
 const eventHub = document.querySelector(".container")
 
+const concepts = document.querySelector("#journalConcepts")
+const date = document.querySelector("#journalDate")
+const mood = document.querySelector("#journalMood")
+const entry = document.querySelector("#journalEntry")
+const id = document.querySelector("#journalId")
+
+
 
 eventHub.addEventListener("editNoteClicked", event => {
     const allEntries = useJournalEntries()
     const entryId = event.detail.entryId
     const entryObject = allEntries.find(entry => entry.id === entryId)
+   
+
+
+    concepts.value= entryObject.concept
+    date.value = entryObject.date
+    mood.value = entryObject.mood
+    entry.value = entryObject.entry
+    id.value = entryId
+   
 })    
 
 export const entryForm = () => {
@@ -16,26 +32,29 @@ export const entryForm = () => {
     eventHub.addEventListener("click", clickEvent =>{
         if (clickEvent.target.id === "recordEntry") {
             
-            const concepts = document.querySelector("#journalConcepts")
-            const date = document.querySelector("#journalDate")
-            const mood = document.querySelector("#journalMood")
-            const entry = document.querySelector("#journalEntry")
-
-            const newEntry = {
-                concept: concepts.value,
-                date: date.value,
-                mood: mood.value,
-                entry: entry.value
-            }
-           
-
+            
+            
             if (concepts.value && date.value && mood.value && entry.value){
-                const id = document.querySelector("#entryId")
-                if(id === ""){
+                const id = document.querySelector(`#journalId`)
+                if(id.value === ""){
+                    const newEntry = {
+                        concept: concepts.value,
+                        date: date.value,
+                        mood: mood.value,
+                        entry: entry.value
+                    }
                     saveEntry(newEntry)
                     render()
                 }else{
-                    editEntry(newEntry)
+                    const updatedEntry = {
+                        concept: concepts.value,
+                        date: date.value,
+                        mood: mood.value,
+                        entry: entry.value,
+                        id: parseInt(id.value)
+                    }
+                    editEntry(updatedEntry)
+                    id.value = ""
                     render()
                 }
             }else{
@@ -71,5 +90,6 @@ const render = () => {
     <div class="button_div">
         <button id="recordEntry">Record Journal Entry</button>
     </div>
+    <input type="hidden" name="entryId" id="journalId" value = "">
     `
 }

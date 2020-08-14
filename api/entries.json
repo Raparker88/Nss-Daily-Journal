@@ -15,11 +15,11 @@
       "mood": "tired"
     },
     {
-      "id": 3,
-      "date": "2020-07-15",
       "concept": "Debugging",
-      "entry": "We learned to use our dev tools in the browser to find bugs the files and troubleshoot problems occurring in our code.",
-      "mood": "happy"
+      "date": "2020-07-15",
+      "mood": "happy",
+      "entry": "We learned to use our dev tools in the browser to find bugs the files and troubleshoot problems occurring in our code. ",
+      "id": 3
     },
     {
       "concept": "api",

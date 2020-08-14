@@ -10,7 +10,7 @@ export const createEntryHTML = (entryObj) =>{
             <p>${entryObj.date}</P>
             <button id="editEntry--${entryObj.id}">edit</button>
             <button id="deleteEntry--${entryObj.id}">delete</button>
-            <input type="hidden" name="entryId" id="${entryObj.id}">
+            
         </li>
     `
 }
