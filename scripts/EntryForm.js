@@ -1,12 +1,21 @@
-import{ saveEntry } from "./JournalDataProvider.js"
+import{ saveEntry, editEntry, useJournalEntries } from "./JournalDataProvider.js"
+
 
 const contentTarget = document.querySelector(".entryForm__container")
 const eventHub = document.querySelector(".container")
+
+
+eventHub.addEventListener("editNoteClicked", event => {
+    const allEntries = useJournalEntries()
+    const entryId = event.detail.entryId
+    const entryObject = allEntries.find(entry => entry.id === entryId)
+})    
 
 export const entryForm = () => {
     render ()
     eventHub.addEventListener("click", clickEvent =>{
         if (clickEvent.target.id === "recordEntry") {
+            
             const concepts = document.querySelector("#journalConcepts")
             const date = document.querySelector("#journalDate")
             const mood = document.querySelector("#journalMood")
@@ -18,12 +27,17 @@ export const entryForm = () => {
                 mood: mood.value,
                 entry: entry.value
             }
-            console.log(concepts.value)
+           
 
             if (concepts.value && date.value && mood.value && entry.value){
-                
-                saveEntry(newEntry)
-                render()
+                const id = document.querySelector("#entryId")
+                if(id === ""){
+                    saveEntry(newEntry)
+                    render()
+                }else{
+                    editEntry(newEntry)
+                    render()
+                }
             }else{
                 window.alert("Please fill in all fields")
             }
@@ -34,7 +48,7 @@ export const entryForm = () => {
 
 const render = () => {
     contentTarget.innerHTML = `
-    <h2>Create Journal Entry</h2>
+    <h2 class="entryFormHeader">Create Journal Entry</h2>
     <div class="concepts__date">
         <div  class="concepts">
             <input type="text" placeholder="Concepts Covered" id="journalConcepts">
