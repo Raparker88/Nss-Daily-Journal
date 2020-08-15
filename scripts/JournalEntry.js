@@ -1,3 +1,5 @@
+const eventHub = document.querySelector(".container")
+
 export const createEntryHTML = (entryObj) =>{
     
     return `
@@ -6,8 +8,21 @@ export const createEntryHTML = (entryObj) =>{
             <p>${entryObj.entry}</p>
             <p>Mood: ${entryObj.mood}</p>
             <p>${entryObj.date}</P>
-            <button>edit</button>
-            <button>delete</button>
+            <button id="editEntry--${entryObj.id}">edit</button>
+            <button id="deleteEntry--${entryObj.id}">delete</button>
+            
         </li>
     `
 }
+
+eventHub.addEventListener("click", event => {
+    if(event.target.id.startsWith("editEntry")){
+        const entryId = event.target.id.split("--")[1]
+        const customEvent = new CustomEvent("editNoteClicked", {
+            detail: {
+                entryId: parseInt(entryId)
+            }
+        })
+        eventHub.dispatchEvent(customEvent)
+    }
+})
