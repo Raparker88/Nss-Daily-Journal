@@ -36,10 +36,10 @@
       "id": 5
     },
     {
-      "concept": "khlkjh",
+      "concept": "deleting entries",
       "date": "2020-08-17",
-      "moodId": "9",
-      "entry": "kjhlkjh",
+      "moodId": "4",
+      "entry": "deleting entries is fun. It requires adding a delete button onto the html for each entry. That module listens for a click event on that button. When the event happens the id of that entry is passed as an argument in the deleteEntry function which is imported from the data provider. This function uses a fetch call interpolated the entryId along with the DELETE method to delete that particular entry. ",
       "id": 6
     }
   ],

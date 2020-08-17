@@ -48,3 +48,11 @@ export const editEntry = (entry) => {
     .then(getEntries)
     .then(dispatchChangeEvent)
 }
+
+export const deleteEntry = entryId => {
+    return fetch(`http://localhost:3000/entries/${entryId}`, {
+        method: "DELETE"
+    })
+        .then(getEntries)
+        .then(dispatchChangeEvent)
+}

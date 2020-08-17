@@ -1,3 +1,5 @@
+import { deleteEntry } from "./JournalDataProvider.js"
+
 const eventHub = document.querySelector(".container")
 
 export const createEntryHTML = (entryObj) =>{
@@ -24,5 +26,12 @@ eventHub.addEventListener("click", event => {
             }
         })
         eventHub.dispatchEvent(customEvent)
+    }
+})
+
+eventHub.addEventListener("click", event => {
+    if(event.target.id.startsWith("deleteEntry")){
+        const entryId = event.target.id.split("--")[1]
+        deleteEntry(entryId)
     }
 })
