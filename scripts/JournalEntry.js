@@ -6,7 +6,7 @@ export const createEntryHTML = (entryObj) =>{
         <li>
             <h3>${entryObj.concept}</h3>
             <p>${entryObj.entry}</p>
-            <p>Mood: ${entryObj.mood}</p>
+            <p>Mood: ${entryObj.mood.label}</p>
             <p>${entryObj.date}</P>
             <button id="editEntry--${entryObj.id}">edit</button>
             <button id="deleteEntry--${entryObj.id}">delete</button>

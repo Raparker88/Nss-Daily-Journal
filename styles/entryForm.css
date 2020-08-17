@@ -19,6 +19,10 @@
     padding-bottom: 15px;
 }
 
+#journalMood {
+    margin-bottom: auto;
+}
+
 .button_div{
     display:flex;
 }
