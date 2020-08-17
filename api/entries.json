@@ -5,35 +5,92 @@
       "date": "2020-07-14",
       "concept": "HTML & CSS",
       "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Ok"
+      "moodId": 2
     },
     {
       "id": 2,
       "date": "2020-07-13",
       "concept": "Javascript Automation",
       "entry": "We learned how to add Javascript into our projects in order to automate the writing of html when adding new content",
-      "mood": "tired"
+      "moodId": 9
     },
     {
       "concept": "Debugging",
       "date": "2020-07-15",
-      "mood": "happy",
+      "moodId": 1,
       "entry": "We learned to use our dev tools in the browser to find bugs the files and troubleshoot problems occurring in our code. ",
       "id": 3
     },
     {
       "concept": "api",
       "date": "2020-07-30",
-      "mood": "confused",
+      "moodId": 11,
       "entry": "We learned how to set up our own api and store input data from the user. This is my first official entry input in the browser! lalala",
       "id": 4
     },
     {
       "concept": "Edit Button",
       "date": "2020-08-14",
-      "mood": "excited",
+      "moodId": 10,
       "entry": "Today I was able to get my edit button to work on my Journal Entries. To edit old entries I had to create a custom event when the edit button is clicked. The journal form component listens for that event, receives the id of the entry from the custom event and finds the corresponding entry object from the api. It then repopulates the journal entry form with the information from that entry object. There is a hidden input field in the form element that is given a value when an old entry is being edited. When Record Journal Entry button is clicked it checks to see if that hidden input field has a value. If there is a value then the entry object with an extra id key is passed as an argument to the editEntry function stored in the data provider which uses the PUT method to update the api for that entry. Else if there is no value in the hidden input field the saveEntry function is called with a new entry object passed as an argument. ",
       "id": 5
+    },
+    {
+      "concept": "khlkjh",
+      "date": "2020-08-17",
+      "moodId": "9",
+      "entry": "kjhlkjh",
+      "id": 6
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Cheerful"
+    },
+    {
+      "id": 2,
+      "label": "Reflective"
+    },
+    {
+      "id": 3,
+      "label": "Gloomy"
+    },
+    {
+      "id": 4,
+      "label": "Humorous"
+    },
+    {
+      "id": 5,
+      "label": "Melancholy"
+    },
+    {
+      "id": 6,
+      "label": "Idylic"
+    },
+    {
+      "id": 7,
+      "label": "Whimsical"
+    },
+    {
+      "id": 8,
+      "label": "Romantic"
+    },
+    {
+      "id": 9,
+      "label": "Tired"
+    },
+    {
+      "id": 10,
+      "label": "Hopeful"
+    },
+    {
+      "id": 11,
+      "label": "Confused"
+    },
+    {
+      "id": 12,
+      "label": "Angry"
     }
   ]
 }
