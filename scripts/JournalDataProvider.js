@@ -9,7 +9,7 @@ const dispatchChangeEvent = () => {
 }
 
 export const getEntries = () => {
-    return fetch('http://localhost:3000/entries?_expand=mood')
+    return fetch('http://localhost:3000/entries?_expand=mood&?_order=asc')
         .then(response => response.json())
         .then(parsedEntries => {
             entries = parsedEntries

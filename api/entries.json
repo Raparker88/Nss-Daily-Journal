@@ -3,44 +3,44 @@
     {
       "id": 1,
       "date": "2020-07-14",
-      "concept": "HTML & CSS",
       "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
       "moodId": 2
     },
     {
       "id": 2,
       "date": "2020-07-13",
-      "concept": "Javascript Automation",
       "entry": "We learned how to add Javascript into our projects in order to automate the writing of html when adding new content",
       "moodId": 9
     },
     {
-      "concept": "Debugging",
       "date": "2020-07-15",
       "moodId": 1,
       "entry": "We learned to use our dev tools in the browser to find bugs the files and troubleshoot problems occurring in our code. ",
       "id": 3
     },
     {
-      "concept": "api",
       "date": "2020-07-30",
       "moodId": 11,
       "entry": "We learned how to set up our own api and store input data from the user. This is my first official entry input in the browser! lalala",
       "id": 4
     },
     {
-      "concept": "Edit Button",
       "date": "2020-08-14",
       "moodId": 10,
       "entry": "Today I was able to get my edit button to work on my Journal Entries. To edit old entries I had to create a custom event when the edit button is clicked. The journal form component listens for that event, receives the id of the entry from the custom event and finds the corresponding entry object from the api. It then repopulates the journal entry form with the information from that entry object. There is a hidden input field in the form element that is given a value when an old entry is being edited. When Record Journal Entry button is clicked it checks to see if that hidden input field has a value. If there is a value then the entry object with an extra id key is passed as an argument to the editEntry function stored in the data provider which uses the PUT method to update the api for that entry. Else if there is no value in the hidden input field the saveEntry function is called with a new entry object passed as an argument. ",
       "id": 5
     },
     {
-      "concept": "deleting entries",
       "date": "2020-08-17",
       "moodId": "4",
       "entry": "deleting entries is fun. It requires adding a delete button onto the html for each entry. That module listens for a click event on that button. When the event happens the id of that entry is passed as an argument in the deleteEntry function which is imported from the data provider. This function uses a fetch call interpolated the entryId along with the DELETE method to delete that particular entry. ",
       "id": 6
+    },
+    {
+      "date": "2020-08-20",
+      "moodId": "11",
+      "entry": "Today I created a select element on the journal form that could handle multiple selections. I had to refactor a lot of my code to be able to do this. I had to change my api to include tags as well as a tagEntries component to store the relationship between the tags and entries. This is required because this is a many to many relationship. I also had to change every other element that handles Journal entry api calls in order to update two sets of data every time a journal entry is created, deleted or edited. The only thing still left to figure out is how to highlight the selected tags again in the entry form when edit is clicked. ",
+      "id": 7
     }
   ],
   "moods": [
@@ -91,6 +91,103 @@
     {
       "id": 12,
       "label": "Angry"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "subject": "API"
+    },
+    {
+      "id": 2,
+      "subject": "components"
+    },
+    {
+      "id": 3,
+      "subject": "fetch"
+    },
+    {
+      "id": 4,
+      "subject": "edit"
+    },
+    {
+      "id": 5,
+      "subject": "debugging"
+    },
+    {
+      "id": 6,
+      "subject": "HTML"
+    },
+    {
+      "id": 7,
+      "subject": "CSS"
+    },
+    {
+      "id": 8,
+      "subject": "automation"
+    },
+    {
+      "id": 9,
+      "subject": "delete"
+    },
+    {
+      "id": 10,
+      "subject": "multiple Selections"
+    },
+    {
+      "id": 11,
+      "subject": "many to many relationships"
+    },
+    {
+      "id": 12,
+      "subject": "ERD"
+    }
+  ],
+  "entriesTags": [
+    {
+      "id": 1,
+      "entryId": 1,
+      "tagId": 6
+    },
+    {
+      "id": 2,
+      "entryId": 1,
+      "tagId": 7
+    },
+    {
+      "id": 3,
+      "entryId": 2,
+      "tagId": 8
+    },
+    {
+      "id": 4,
+      "entryId": 3,
+      "tagId": 5
+    },
+    {
+      "id": 5,
+      "entryId": 4,
+      "tagId": 1
+    },
+    {
+      "id": 6,
+      "entryId": 5,
+      "tagId": 4
+    },
+    {
+      "id": 7,
+      "entryId": 6,
+      "tagId": 9
+    },
+    {
+      "entryId": 7,
+      "tagId": 10,
+      "id": 8
+    },
+    {
+      "entryId": 7,
+      "tagId": 11,
+      "id": 9
     }
   ]
 }
