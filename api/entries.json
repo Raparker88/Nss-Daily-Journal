@@ -38,8 +38,8 @@
     },
     {
       "date": "2020-08-20",
-      "moodId": "11",
-      "entry": "Today I created a select element on the journal form that could handle multiple selections. I had to refactor a lot of my code to be able to do this. I had to change my api to include tags as well as a tagEntries component to store the relationship between the tags and entries. This is required because this is a many to many relationship. I also had to change every other element that handles Journal entry api calls in order to update two sets of data every time a journal entry is created, deleted or edited. The only thing still left to figure out is how to highlight the selected tags again in the entry form when edit is clicked. ",
+      "moodId": "8",
+      "entry": "Today I built a multiple selection component for the entry tags regarding concepts covered. It required having to update the code for saving a new entry, deleting entries, and for editing entries since all of those operations now require me to update data in two data arrays in the API instead of just one since this involves a many to many relationship. ",
       "id": 7
     }
   ],
@@ -188,6 +188,11 @@
       "entryId": 7,
       "tagId": 11,
       "id": 9
+    },
+    {
+      "entryId": 7,
+      "tagId": 12,
+      "id": 10
     }
   ]
 }

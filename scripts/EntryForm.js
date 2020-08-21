@@ -25,7 +25,6 @@ eventHub.addEventListener("editEntryClicked", event => {
 
     const optionsArr = Array.from(concepts.options)
     const selected = relationshipArr.map(t => optionsArr.find(o => parseInt(o.value) === t.tagId))
-    console.log(selected)
 
     //concepts.selectedOptions = selected
     date.value = entryObject.date
@@ -114,8 +113,8 @@ const render = () => {
     <h2 class="entryFormHeader">Create Journal Entry</h2>
     <div class="concepts__date">
         <div  class="concepts">
+            <div class="conceptLabel"><label for="journalConcepts">Concepts covered</label></div>
             <select id="journalConcepts" multiple="multiple">
-                <option value="0">Please select concepts covered...</option>
                 ${
                     tags.map(tag => `<option value="${tag.id}">${tag.subject}</option>`).join('')
                 }

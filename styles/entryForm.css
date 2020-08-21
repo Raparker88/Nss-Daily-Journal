@@ -13,6 +13,14 @@
     justify-content: space-evenly;
 }
 
+.concepts {
+    display: flex;
+}
+
+.conceptLabel {
+    margin-right: 15px;
+}
+
 
 .mood__entry {
     display:flex;
